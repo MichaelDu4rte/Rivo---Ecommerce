@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    background-color: #C2EFD4;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 14%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .6s;
+    border-bottom: 1px solid #224F34;
+}
+
+header .logo {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #224F34;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav i {
+    display: inline-block;
+    transition: all .6s;
+}
+
+.nav i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.nav i:hover {
+    transform: translateY(-5px) scale(1.0);
+}
+
+#cart-icon {
+    color: rgb(0, 0, 0);
+}
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #C2EFD4;
+    border-left: 2px solid #224F34;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+
+.cart.active {
+    right: 0px;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.rem;
+    border-top: 1px solid #224F34;
+}
+
+
+
+.total-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.cart-title {
+    text-align: center;
+    color: #224F34;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    margin: 1rem 0 0 .7rem;
+}
+
+.btn-buy {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background: #545035;
+    color: white;
+    font-size: 1.2rem;
+    font-style: italic;
+    transition: all .3s;
+}
+
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+    object-position: center;
+}
+
+.detail-box {
+    display: grid;
+    row-gap:  0.5ren;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    margin-top: 1rem;
+    border: 1px solid #545035;
+    outline-color: #43835D;
+    width: 2.8rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+
+.cart-remove {
+    font-size: 24px;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    color: rgb(186, 37, 37);
+}
+
+/* ------- Section ------- */
+
+section {
+    padding: 90px 14% 70px;
+}
+
+
+/* ------- Home ------- */
+
+#home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #C2EFD4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home .home-text {
+    padding: 60px;
+}
+
+#home .home-text h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #224F34;
+    max-width: 500px;
+}
+
+#home .home-text p {
+    color: #43835D;
+    font-size: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+/* ------- Btn ------- */
+
+.btn {
+    display: inline-block;
+    padding: 14px 42px;
+    background-color:#545035 ;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    transition: all .6s;
+}
+
+.btn:hover,
+.btn-buy:hover {
+    transform: scale(1.1) translateY(-6px);
+    border: 2px solid #545035;
+    background: transparent;
+    color: #545035;
+}
+
+
+/* ------- Products/Shop ------- */
+
+.shop-title {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: #224F34;
+}
+
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem
+}
+
+.product-box {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #224F34;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.product-box:hover {
+    background: #43835D;
+    box-shadow: 0 8px 32px hsla(0.75, 0.82, 0.165, 1);
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.product-box:hover .product-title, 
+.product-box:hover .price {
+
+    color: #141414;
+
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .8rem;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+.add-cart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #272626;
+    color: white;
+    transition: all .4s;
+}
+
+.add-cart:hover {
+    background: hsl(249, 32%, 17%);
+}
+
+
+
+/* ------- Media ------- */
+@media (max-width: 1610px) {
+    header {
+        padding: 15px 7%;
+    }
+
+    .home-text {
+        margin-top: 3rem;
+    }
+
+    section {
+        padding: 70px 7% 80px;
+    }
+}
+
+
+@media (max-width: 1500px) {
+
+    #home {
+        height: 90vh;
+    }
+
+   
+
+    #home .home-text h1 {
+        font-size: 4.8rem;
+    }
+
+    #home .home-text p {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@media (max-width: 1170px) {
+    header {
+        padding: 10px 4%;
+    }
+
+    section {
+        padding: 60px 4% 70px;
+    }
+}
+
+
+
+@media (max-width: 1050px) {
+    header {
+        padding: 10px 4%;
+    }
+
+    section {
+        padding: 60px 4% 70px;
+    }
+
+    #home .home-text h1 {
+        font-size: 3rem;
+    }
+
+    #home .home-text p {
+        font-size: 1.5rem;
+    }
+
+    header .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #224F34;
+    }
+
+    #home .home-img {
+        display: none;
+    }
+
+    .cart {
+        width: 100%;
+    }
+  
+
+}
+
+
+@media (max-width: 530px) {
+
+    #home .home-text {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #home .home-text h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #home .home-text p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .mav a, i {
+        text-align: center;
+        margin-right: 7px;
+    }
+}
