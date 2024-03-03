@@ -2,7 +2,7 @@
 # Rivo - Site para compra de roupas
 
 ![alt text](https://i.imgur.com/v07Ix3E.png)
-![alt text](https://i.imgur.com/W066Vnh.png)
+![alt text](https://i.imgur.com/mCBCJiA.png)
 
 
 Este projeto consiste em um site para compra de roupas. A página inicial apresenta uma breve introdução à loja, seguida por um catálogo de roupas exibido abaixo. Cada item no catálogo é acompanhado por um botão "Adicionar ao Carrinho".
