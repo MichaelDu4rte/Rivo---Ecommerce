@@ -1,8 +1,6 @@
 
 # Rivo - Site para compra de roupas
 
-## Screenshots
-
 ![alt text](https://i.imgur.com/v07Ix3E.png)
 ![alt text](https://i.imgur.com/W066Vnh.png)
 
